@@ -78,7 +78,7 @@ class TerminalChannel(ChatChannel):
                 prompt = trigger_prefixs[0] + prompt  # 给没触发的消息加上触发前缀
 
             # 先返回响应
-            self.produce()
+            # self.produce()
             # 再处理消息
             context = self._compose_context(ContextType.TEXT, prompt, msg=TerminalMessage(msg_id, prompt))
             if context:
